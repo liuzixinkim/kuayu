@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="./jsonp.js"></script>
+    <script>
+        
+        jsonp({
+            url:'http://gongzhang.jiaju.sina.com.cn/api/outputdata/chief_list',
+            params:{
+                page: 1,
+                page_size: 20,
+                city_id: 1101
+            },
+            jsonpCallback:'callBackName'
+        }).then((data)=>{
+            console.log(data)
+        })
+
+    </script>
+</body>
+
+</html>
